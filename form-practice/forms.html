@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta charset="utf-8">
+      <title>Super Forms</title>
+      <link href="forms.css" rel="stylesheet">
+
+  </head>
+
+    <body>
+
+      <h1>Bootstrap 3.3.x fade carousel</h1>
+
+    <div id="carouselHacked" class="carousel slide carousel-fade" data-ride="carousel">
+
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner" role="listbox">
+            <div class="item active">
+                <div class="carousel-caption">
+                caption 1
+                </div>
+            </div>
+            <div class="item">
+                <div class="carousel-caption">
+                    caption 2
+                </div>
+            </div>
+            <div class="item">
+                <div class="carousel-caption">
+                    caption 3
+                </div>
+            </div>
+        </div>
+
+        <!-- Controls -->
+        <a class="left carousel-control" href="#carouselHacked" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#carouselHacked" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+      <form>
+        <p>Hello</p>
+        <button>Don't Click Me</button>
+        Enter your text here:<input type="text" id="message">
+        <br>
+        In Caps: <span id="result"></span>
+        <br>
+        <br>
+        <input type="number" id="fahrenheit">
+        &deg;F = <span id="result2"></span>
+        &deg;C
+      </form>
+
+      Name:
+<form>
+ <input type="text" value="name">
+ How was your experience today?
+ <select name="rating">
+  <option value="strange">Strange</option>
+  <option value="unnerving">Unnerving</option>
+  <option value="spooky">Spooky</option>
+  <option value="shocking">Shocking</option>
+  <option value="blase">Blase</option>
+</select>
+ What was your favorite?
+<input list="favorites">
+<datalist id="favorites">
+  <option value="ghost">
+  <option value="clown">
+  <option value="werewolf">
+  <option value="vampire">
+  <option value="wereclown">
+</datalist>
+ Feedback:
+ <textarea name="feedback" rows="10" cols="40">
+ <button>Show Results</button>
+</form>
+
+
+
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+      <script src="forms.js"></script>
+    </body>
+</html>
