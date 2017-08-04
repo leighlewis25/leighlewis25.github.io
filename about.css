@@ -57,3 +57,25 @@ a:hover:after {
   clear: both;
   text-align:center;
 }
+
+#text{
+  position: relative;
+  left: 90px;
+
+}
+#me{
+  max-width: 400px;
+}
+
+#photo{
+  float: right;
+}
+
+#bottomphotos{
+  position: relative;
+  display: block;
+  text-align: center;
+  margin:auto;
+  top: 30px;
+
+}
