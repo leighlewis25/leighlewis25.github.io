@@ -1,6 +1,6 @@
 
 
-var homeImages = ["http://i.imgur.com/hYsw4TZ.jpg","http://i.imgur.com/mwIQz9Q.jpg","http://i.imgur.com/92iuV6H.jpg","http://i.imgur.com/yMP1cBX.jpg","http://i.imgur.com/GAp4lWV.jpg","http://i.imgur.com/fUsixsy.jpg","http://i.imgur.com/qrvxnNR.jpg","http://i.imgur.com/RBANoat.jpg","http://i.imgur.com/Bjvlg7B.jpg","http://i.imgur.com/tqQJpy6.jpg"];
+var homeImages = ["http://i.imgur.com/yMP1cBX.jpg","http://i.imgur.com/hYsw4TZ.jpg","http://i.imgur.com/mwIQz9Q.jpg","http://i.imgur.com/92iuV6H.jpg","http://i.imgur.com/fUsixsy.jpg","http://i.imgur.com/qrvxnNR.jpg","http://i.imgur.com/RBANoat.jpg","http://i.imgur.com/Bjvlg7B.jpg","http://i.imgur.com/tqQJpy6.jpg"];
 //var imId = ["#photo1", "#photo2", "#photo3", "#photo4", "#photo5"]
 currentImage1 = $("#photo1")
 imageIndex = 0

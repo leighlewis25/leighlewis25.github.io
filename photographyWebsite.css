@@ -78,16 +78,33 @@ p#photoControls1 span{
   position: relative;
   margin: auto;
   max-width: 100%;
+  padding-bottom: 10px;
+  border-bottom: solid 1px #0F355A;
 }
-
-#photo1, #photo2,#photo3,#photo4,#photo5,#photo6,#photo7,#photo8,#photo9{
+h1{
+  clear: both;
+  position: relative;
+  top: 0px;
+  display:block;
+  margin: auto;
+  text-align: center;
+}
+#photo1{
+  clear: both;
+  text-align: center;
   display: block;
   position: relative;
+  top: 10px;
   margin: auto;
   width: 600px;
   height: 350px;
 }
+#galleryP {
+  text-align: center;
 
+
+}
+/*
 .swipe {
   overflow: hidden;
   position: relative;
@@ -109,14 +126,14 @@ p#photoControls1 span{
 
 
 
-
+*/
 
 
 
 footer
 {
   border-top: 1px solid #0F355A;
-  margin-top: 2000px;
+  margin-top: 1000px;
   text-align: right;
   size: 10px;
 }
