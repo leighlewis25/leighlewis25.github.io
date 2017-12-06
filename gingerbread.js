@@ -17,6 +17,8 @@ const POWER_UP_START_X = Math.random()*(canvas.width - 1) + 1;
 const POWER_UP_START_Y = Math.random()*(canvas.height - 1) + 1;
 const POWER_UP_WIDTH = 50;
 const POWER_UP_HEIGHT = 50;
+const GAME_IS_OVER_Y = canvas.height-50;
+const GAME_IS_OVER_X = 30;
 let gameIsOver = false;
 let timer = 0;
 let score = 0;
@@ -31,6 +33,17 @@ gameOverImg.src = "https://i.imgur.com/ITiY5vs.png";
 let santaHatImg = new Image();
 santaHatImg.src = 'https://i.imgur.com/ThdI5fE.png';
 
+
+function startGame() {
+  if (progressBar.value === 0) {
+    progressBar.value = 100;
+    timer = 0;
+    score = 0;
+    gameIsOver = false;
+    Object.assign(player, {x: canvas.width / 2, y: canvas.height / 2});
+    requestAnimationFrame(drawScene);
+  }
+}
 
 function haveCollided(sprite1, sprite2) {
   return (
@@ -194,6 +207,8 @@ function santaHat() {
     enemies.forEach(enemy => enemy.draw());
     if (gameIsOver) {
       gameOver();
+      ctx.font = '30px Berkshire Swash, cursive';
+      ctx.fillText('Game over, click to play again', GAME_IS_OVER_X, GAME_IS_OVER_Y);
     } else {
       timer++;
       updateScene();
@@ -201,4 +216,5 @@ function santaHat() {
 
   }
 
-  requestAnimationFrame(drawScene);
+canvas.addEventListener('click', startGame);
+requestAnimationFrame(drawScene);
