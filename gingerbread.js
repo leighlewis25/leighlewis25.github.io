@@ -192,6 +192,8 @@ function updateScene() {
   function gameOver() {
     clearBackground();
     ctx.drawImage(gameOverImg, 30, 30);
+    backgroundSong.pause();
+    backgroundSong.currentTime=0;
     //http://www.powerpointhintergrund.com/ppt-image/game-over-png-1406.html
   }
 
