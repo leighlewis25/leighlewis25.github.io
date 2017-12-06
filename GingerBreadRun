@@ -1,0 +1,15 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Gingerbread Man Run</title>
+  </head>
+  <body>
+    <h1>Gingerbread Man Run</h1>
+
+    <p><progress max=100 value=100></progress> Score: <span id='score'></span> </p>
+
+    <canvas width="600" height="600"></canvas>
+  </body>
+</html>
