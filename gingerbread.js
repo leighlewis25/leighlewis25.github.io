@@ -1,3 +1,4 @@
+const backgroundSong = document.getElementById('backgroundSong');
 const canvas = document.querySelector("canvas");
 const ctx = canvas.getContext("2d");
 const progressBar = document.querySelector("progress");
@@ -221,4 +222,5 @@ function santaHat() {
   }
 
 canvas.addEventListener('click', startGame);
+backgroundSong.play();
 requestAnimationFrame(drawScene);
