@@ -41,6 +41,7 @@ function startGame() {
     timer = 0;
     score = 0;
     document.getElementById('score').innerHTML= score;
+    backgroundSong.play();
     gameIsOver = false;
     Object.assign(player, {x: canvas.width / 2, y: canvas.height / 2});
     requestAnimationFrame(drawScene);
