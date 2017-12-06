@@ -39,9 +39,13 @@ function startGame() {
     progressBar.value = 100;
     timer = 0;
     score = 0;
+    document.getElementById('score').innerHTML= score;
     gameIsOver = false;
     Object.assign(player, {x: canvas.width / 2, y: canvas.height / 2});
     requestAnimationFrame(drawScene);
+    enemies = [
+  new Enemy(ENEMY_SOURCE, ENEMY_STARTING_X, ENEMY_STARTING_Y, ENEMY_SPEED, ENEMY_WIDTH, ENEMY_HEIGHT)
+];
   }
 }
 
