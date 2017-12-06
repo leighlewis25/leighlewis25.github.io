@@ -23,6 +23,7 @@ const GAME_IS_OVER_X = 30;
 let gameIsOver = false;
 let timer = 0;
 let score = 0;
+document.getElementById('score').innerHTML= score;
 const TIME_UNTIL_SPAWN = 500;
 
 let snowyImage = new Image();
@@ -170,7 +171,7 @@ function updateScene() {
   }
   if (timer % TIME_UNTIL_SPAWN === 0) {
     enemies.push(new Enemy(ENEMY_SOURCE, ENEMY_STARTING_X, ENEMY_STARTING_Y, ENEMY_SPEED, ENEMY_WIDTH, ENEMY_HEIGHT));
-    score += 2;
+    score += 1;
     document.getElementById('score').innerHTML= score;
   }
   enemies.forEach(enemy => {
