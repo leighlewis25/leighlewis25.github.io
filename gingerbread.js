@@ -189,12 +189,6 @@ function updateScene() {
   requestAnimationFrame(drawScene);
 }
 
-function santaHat() {
-  ctx.drawImage(santaHatImg, 10, 10, POWER_UP_WIDTH, POWER_UP_HEIGHT);
-}
-
-  setTimeout(santaHat, 1000);
-
   function gameOver() {
     clearBackground();
     ctx.drawImage(gameOverImg, 30, 30);
