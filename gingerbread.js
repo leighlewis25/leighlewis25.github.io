@@ -150,7 +150,7 @@ class Health extends Sprite {
   }
 }
 
-let newHealth = new Health(HEALTH_SOURCE,HEALTH_START_X,HEALTH_START_Y, POWER_UP_WIDTH, POWER_UP_HEIGHT
+let newHealth = new Health(HEALTH_SOURCE,randomPlace(), randomPlace(), POWER_UP_WIDTH, POWER_UP_HEIGHT
 );
 
 let mouse = {
@@ -166,6 +166,10 @@ function updateMouse(event) {
   } = canvas.getBoundingClientRect();
   mouse.x = event.clientX - left;
   mouse.y = event.clientY - top;
+}
+
+function randomPlace(){
+  return Math.random()*canvas.width;
 }
 
 function updateScene() {
