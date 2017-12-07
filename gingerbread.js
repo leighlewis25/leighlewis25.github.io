@@ -14,8 +14,9 @@ const ENEMY_STARTING_X = 80;
 const ENEMY_STARTING_Y = 200;
 const ENEMY_WIDTH = 60;
 const ENEMY_HEIGHT = 60;
-const POWER_UP_START_X = Math.random()*(canvas.width - 1) + 1;
-const POWER_UP_START_Y = Math.random()*(canvas.height - 1) + 1;
+const HEALTH_SOURCE = 'https://i.imgur.com/ThdI5fE.png';
+let HEALTH_START_X = Math.random()*(canvas.width - 1) + 1;
+let HEALTH_START_Y = Math.random()*(canvas.height - 1) + 1;
 const POWER_UP_WIDTH = 50;
 const POWER_UP_HEIGHT = 50;
 const GAME_IS_OVER_Y = canvas.height-50;
@@ -23,17 +24,14 @@ const GAME_IS_OVER_X = 30;
 let gameIsOver = false;
 let timer = 0;
 let score = 0;
-document.getElementById('score').innerHTML= score;
 const TIME_UNTIL_SPAWN = 500;
+let healthExists = false;
 
 let snowyImage = new Image();
 snowyImage.src = "https://i.imgur.com/2z59iGt.jpg";
 
 let gameOverImg = new Image();
 gameOverImg.src = "https://i.imgur.com/ITiY5vs.png";
-
-let santaHatImg = new Image();
-santaHatImg.src = 'https://i.imgur.com/ThdI5fE.png';
 
 
 function startGame() {
@@ -138,6 +136,19 @@ class Enemy extends Sprite {
 let enemies = [
   new Enemy(ENEMY_SOURCE, ENEMY_STARTING_X, ENEMY_STARTING_Y, ENEMY_SPEED, ENEMY_WIDTH, ENEMY_HEIGHT)
 ];
+
+class Health extends Sprite {
+  constructor(source, x, y, imgWidth, imgHeight) {
+    super();
+    Object.assign(this, {
+      source,
+      x,
+      y,
+      imgWidth,
+      imgHeight
+    });
+  }
+}
 
 let newHealth = new Health(HEALTH_SOURCE,HEALTH_START_X,HEALTH_START_Y, POWER_UP_WIDTH, POWER_UP_HEIGHT
 );
