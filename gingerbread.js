@@ -139,6 +139,9 @@ let enemies = [
   new Enemy(ENEMY_SOURCE, ENEMY_STARTING_X, ENEMY_STARTING_Y, ENEMY_SPEED, ENEMY_WIDTH, ENEMY_HEIGHT)
 ];
 
+let newHealth = new Health(HEALTH_SOURCE,HEALTH_START_X,HEALTH_START_Y, POWER_UP_WIDTH, POWER_UP_HEIGHT
+);
+
 let mouse = {
   x: 0,
   y: 0
@@ -171,9 +174,17 @@ function updateScene() {
   }
   if (timer % TIME_UNTIL_SPAWN === 0) {
     enemies.push(new Enemy(ENEMY_SOURCE, ENEMY_STARTING_X, ENEMY_STARTING_Y, ENEMY_SPEED, ENEMY_WIDTH, ENEMY_HEIGHT));
-    score += 1;
+    score += 2;
     document.getElementById('score').innerHTML= score;
+    if (enemies.length%2 === 0) {
+    healthExists = true;
+    }
   }
+  if (healthExists && haveCollided(player, newHealth)) {
+    progressBar.value +=2;
+    healthExists = false;
+    }
+  
   enemies.forEach(enemy => {
     if (haveCollided(enemy, player)) {
       progressBar.value -= 1;
@@ -207,6 +218,9 @@ function updateScene() {
   function drawScene() {
     clearBackground();
     player.draw();
+    if (healthExists === true) {
+      newHealth.draw();
+    }
     enemies.forEach(enemy => enemy.draw());
     if (gameIsOver) {
       gameOver();
